@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Birthday Surprise Grid</title>
+
+  <!-- Romantic font -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Floating Hearts, Cakes, Sparkles -->
+  <div class="floating-elements">
+    <!-- Hearts -->
+    <div class="heart" style="left: 10%; animation-delay: 0s;">💖</div>
+    <div class="heart" style="left: 30%; animation-delay: 1s;">💕</div>
+    <div class="heart" style="left: 50%; animation-delay: 2s;">💗</div>
+    <div class="heart" style="left: 70%; animation-delay: 3s;">💓</div>
+    <div class="heart" style="left: 90%; animation-delay: 4s;">💘</div>
+
+    <!-- Cakes -->
+    <div class="cake" style="left: 15%; animation-delay: 0.5s;">🎂</div>
+    <div class="cake" style="left: 35%; animation-delay: 1.5s;">🧁</div>
+    <div class="cake" style="left: 55%; animation-delay: 2.5s;">🍰</div>
+    <div class="cake" style="left: 75%; animation-delay: 3.5s;">🎂</div>
+
+    <!-- Sparkles -->
+    <div class="sparkle" style="left: 5%; animation-delay: 0.2s;">✨</div>
+    <div class="sparkle" style="left: 25%; animation-delay: 1.2s;">⭐</div>
+    <div class="sparkle" style="left: 45%; animation-delay: 2.2s;">✨</div>
+    <div class="sparkle" style="left: 65%; animation-delay: 3.2s;">⭐</div>
+    <div class="sparkle" style="left: 85%; animation-delay: 4.2s;">✨</div>
+  </div>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <h1 class="title-romantic">Happy Birthday, Langga 💗</h1>
+    <p class="sub">Click mo lang mga box ga. Simulan mo sa I tas last na yang gitna : )</p>
+  </header>
+
+  <!-- Main Grid -->
+  <main>
+    <div class="grid" id="grid">
+
+      <!-- Row 1 -->
+      <button class="card" data-box="1"><span class="letter">I</span></button>
+      <button class="card" data-box="2"><span class="letter">L</span></button>
+      <button class="card" data-box="3"><span class="letter">Y</span></button>
+
+      <!-- Row 2: left photo, center picture, right photo -->
+      <button class="card photo" data-box="4">
+        <img src="pictures/1.jpg" alt="photo left" />
+      </button>
+
+      <button class="card photo" data-box="9">
+        <img src="pictures/2.jpg" alt="center photo" />
+      </button>
+
+      <button class="card photo" data-box="5">
+        <img src="pictures/1.jpg" alt="photo right" />
+      </button>
+
+      <!-- Row 3 -->
+      <button class="card" data-box="6"><span class="letter">R</span></button>
+      <button class="card" data-box="7"><span class="letter">A</span></button>
+      <button class="card" data-box="8"><span class="letter">I</span></button>
+
+    </div>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-panel">
+      <button id="closeModal" class="close">&times;</button>
+      <div id="modalContent" class="modal-content"></div>
+    </div>
+  </div>
+
+  <!-- Music Control -->
+  <div class="music-control">
+    <button id="toggleMute">🔈 Play Music</button>
+    <audio id="bgMusic" loop muted>
+      <source src="music.mp3" type="audio/mpeg" />
+    </audio>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
